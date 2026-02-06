@@ -255,6 +255,83 @@
       opacity: 1;
       transform: translateX(-50%) translateY(-4px);
     }
+
+   /* -----------------------------------------
+   MOBILE LAYOUT (portrait phones)
+   ----------------------------------------- */
+@media (max-width: 650px) {
+
+  /* Turn each row into a stacked card */
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  tbody tr td {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: none;
+  }
+
+  /* Thumbnail stays at the top */
+  .thumb-cell {
+    width: 100% !important;
+  }
+  .thumb-wrapper {
+    width: 100%;
+    max-width: 260px;
+  }
+  .thumb-img {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* Video info section */
+  .info-cell {
+    width: 100% !important;
+    margin-top: 6px;
+  }
+
+  .filename-text {
+    max-width: 100% !important;
+    white-space: normal;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .meta-line {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  /* Share/download buttons move under the info */
+  .share-cell {
+    width: 100% !important;
+    text-align: left !important;
+    margin-top: 10px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .icon-button {
+    padding: 8px 12px;
+  }
+
+  /* Hide table headers on mobile */
+  thead {
+    display: none;
+  }
+
+  /* Remove table look */
+  table {
+    border-collapse: separate;
+  }
+}
+
+
   </style>
 </head>
 
